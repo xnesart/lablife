@@ -1,0 +1,42 @@
+.footer {
+    margin-top: 73px;
+    margin-bottom: 150px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        color: $colorBlack;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &:first-child {
+            max-width: 315px;
+            text-align: left;
+        }
+    }
+    &__title {
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    &__link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: inherit;
+    }
+    &__description {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__social{
+        margin-top: 20px;
+        display: flex;
+
+    }
+    &__social-link{
+
+    }
+}
