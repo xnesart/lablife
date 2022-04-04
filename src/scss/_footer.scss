@@ -1,21 +1,30 @@
 .footer {
     margin-top: 73px;
-    margin-bottom: 150px;
     &__inner {
         display: flex;
-        justify-content: space-between;
+        gap: 133px;
         color: $colorBlack;
+        @media (max-width: 1250px) {
+            gap: 50px;
+        }
+        @media (max-width: 989px) {
+            gap: 30px;
+            flex-wrap: wrap;
+        }
     }
     &__item {
         display: flex;
         flex-direction: column;
+        text-align: left;
         &:first-child {
             max-width: 315px;
-            text-align: left;
+        }
+        &:last-child {
         }
     }
     &__title {
-        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-bottom: 25px;
         font-weight: 500;
         font-size: 24px;
         line-height: 36px;
@@ -31,12 +40,79 @@
         font-size: 18px;
         line-height: 27px;
     }
-    &__social{
+    &__social-list {
         margin-top: 20px;
         display: flex;
-
+        gap: 27px;
+        align-items: center;
     }
-    &__social-link{
-
+    &__social-link {
+    }
+    &__social-thumb{
+        transition: transform 0.3s ease 0s;
+        &:hover,
+        &:focus{
+            transform: scale(1.05);
+        }
+    }
+    &__description_location {
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 22px;
+            left: 0;
+            padding: 10px 0;
+            background-image: url("../images/sprites/svg/location.svg");
+        }
+    }
+    &__tel {
+        text-decoration: none;
+        color: $colorBlack;
+        font-size: 18px;
+        line-height: 27px;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 40px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 0;
+            padding: 10px 0;
+            background-image: url("../images/sprites/svg/phone.svg");
+        }
+    }
+    &__mail {
+        text-decoration: none;
+        color: $colorBlack;
+        padding-left: 35px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 22px;
+            left: 0;
+            top: -5px;
+            padding: 10px 0;
+            background-image: url("../images/sprites/svg/mail.svg");
+        }
+    }
+    &__copyright {
+        margin-top: 90px;
+        margin-bottom: 40px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: $colorGray;
+        @media (max-width: 500px) {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
     }
 }

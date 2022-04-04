@@ -1,37 +1,41 @@
 /* eslint-disable no-console */
-console.log("Hello world");
+console.log('Hello world');
 // import { Pagination } from "swiper";
-import "/node_modules/swiper/swiper-bundle.min";
+import '/node_modules/swiper/swiper-bundle.min';
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper('.swiper', {
 	loop: false,
 	observer: true,
 	observeParents: true,
-	slidesPerView: 3,
+	slidesPerView: 'auto',
 	spaceBetween: 0,
 	autoHeight: true,
 	// Navigation arrows
 	navigation: {
-		nextEl: ".recently-works__button-next",
-		prevEl: ".recently-works__button-prev",
+		nextEl: '.recently-works__button-next',
+		prevEl: '.recently-works__button-prev',
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 30,
 			autoHeight: true,
 		},
 		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
+			spaceBetween: 30,
 		},
 		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
+			spaceBetween: 30,
 		},
 		1268: {
-			slidesPerView: 3,
-			spaceBetween: 30,
+			spaceBetween: 66,
 		},
 	},
 });
+
+(function burgerFunc() {
+	const burgerItem = document.querySelector('.hamburger');
+
+	burgerItem.addEventListener('click', () => {
+		burgerItem.classList.toggle('is-active');
+	});
+})();

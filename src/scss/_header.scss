@@ -3,6 +3,9 @@
     background-color: #f2fafa;
     max-width: 1512px;
     margin: 0 auto;
+    @media (max-width: 500px) {
+        padding-top: 30px;
+    }
     &__inner {
         box-sizing: border-box;
         display: flex;
@@ -14,6 +17,17 @@
     }
     &__logo {
         margin-left: -10px;
+        transition: 0.3s ease 0s transform;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            transform: scale(1.02);
+        }
+    }
+    &__logo-img {
+        @media (max-width: 400px) {
+            width: 200px;
+        }
     }
     &__nav {
         position: relative;
@@ -29,6 +43,13 @@
             padding-bottom: 10px;
         }
     }
+    .hamburger {
+        display: none;
+        @media (max-width: 1010px) {
+            display: block;
+            z-index: 3;
+        }
+    }
     &__nav-list {
         display: flex;
         gap: 35px;
@@ -39,9 +60,35 @@
             display: none;
         }
     }
+    .is-active + .header__nav-list {
+        @media (max-width: 1010px) {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            padding-top: 135px;
+            z-index: 2;
+            .header__nav-link {
+                color: #fff;
+            }
+            @media (max-width: 1010px) {
+                padding-top: 75px;
+            }
+        }
+    }
     &__nav-item {
         padding-top: 11px;
         padding-bottom: 11px;
+    }
+    &__nav-item_post {
+        display: none;
+        @media (max-width: 1010px) {
+            display: inline;
+        }
     }
     &__nav-link {
         text-decoration: none;
@@ -49,11 +96,12 @@
         font-size: 20px;
         line-height: 30px;
         &:active,
+        &:hover,
         &:focus {
             color: $colorBlue;
         }
     }
-    &__nav-submit {
+    &__nav-link-button {
         display: inline-block;
         padding-top: 11px;
         padding-bottom: 11px;

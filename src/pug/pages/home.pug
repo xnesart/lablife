@@ -6,10 +6,10 @@ main.home
 					h1.hero__item-title Are you looking for Freelancers?
 					p.hero__item-description Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
 					form.hero__item-search(method="post")
-						a.hero__item-hire(href="#") Hire a freelancer
+						a.hero__item-hire(href="#!") Hire a freelancer
 						label.hero__search-label(for="search")
-						input.hero__search-input(type="text" placeholder="search freelance work" name="search" id="search")
-						button.hero__search-button(type="submit")
+						input.hero__search-input(type="text" placeholder="search freelance work" name="search" id="search" required)
+						button.hero__search-button(type="button")
 							img.hero__search-button-img(src="./images/sprites/svg/search-button.svg" alt="search button")
 				.hero__opportunities
 					.hero__opportunities-list
@@ -37,19 +37,23 @@ main.home
 						span.find__item-info-span 300+
 						p.find__item-info-description freelance work Posted
 				.find__item
-					h4.find__item-title
+					h2.find__item-title
 						| Find The Best 
 						span.find__item-title-span Freelancers
 						|   Here
 					p.find__item-description
 						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat bibendum ornare urna, cursus eget convallis. Feugiat imperdiet posuere justo, ultrices interdum sed orci nunc, mattis. Ipsum viverra viverra neque adipiscing arcu, quam dictum. Dui mi viverra dui, sit accumsan, tincidunt massa. Dui cras magnis.
 	section.recently-works
-		.container
+		.container.recently-works__container
 			p.recently-works__subtitle The latest freelance work!
 			h2.recently-works__title
 				| Recently Posted 
 				span.recently-works__span  Works
-			//- .recently-works__slider
+			.recently-works__navigation
+				button.recently-works__button-prev
+					+svg('arrow-prev')
+				button.recently-works__button-next
+					+svg('arrow-next')
 			.swiper
 				.swiper-wrapper
 					.swiper-slide.recently-works__slider-item
@@ -58,28 +62,28 @@ main.home
 						p.recently-works__slider-description Need a professional logo with writing underneath for our jewellery company
 						.recently-works__slider-prices
 							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide2.png" alt="slider")
 						h6.recently-works__slider-title Graphic Design
 						p.recently-works__slider-description We need a graphic designer with UI/UX skills for our Furniture company
 						.recently-works__slider-prices
 							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide3.png" alt="slider")
 						h6.recently-works__slider-title Need a SEO
 						p.recently-works__slider-description Need a SEO for our company who will let our company to a higher level
 						.recently-works__slider-prices
-							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							p.recently-works__slider-prices-info Highest bid $300
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide1.png" alt="slider")
 						h6.recently-works__slider-title Logo Design
 						p.recently-works__slider-description Need a professional logo with writing underneath for our jewellery company
 						.recently-works__slider-prices
 							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide2.png" alt="slider")
 						h6.recently-works__slider-title Graphic Design
@@ -92,32 +96,29 @@ main.home
 						h6.recently-works__slider-title Need a SEO
 						p.recently-works__slider-description Need a SEO for our company who will let our company to a higher level
 						.recently-works__slider-prices
-							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							p.recently-works__slider-prices-info Highest bid $300
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide1.png" alt="slider")
 						h6.recently-works__slider-title Logo Design
 						p.recently-works__slider-description Need a professional logo with writing underneath for our jewellery company
 						.recently-works__slider-prices
 							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide2.png" alt="slider")
 						h6.recently-works__slider-title Graphic Design
 						p.recently-works__slider-description We need a graphic designer with UI/UX skills for our Furniture company
 						.recently-works__slider-prices
 							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
+							a.recently-works__slider-prices-link(href="#!") Apply now
 					.swiper-slide.recently-works__slider-item
 						img.recently-works__slider-img(src="./images/slider/slide3.png" alt="slider")
 						h6.recently-works__slider-title Need a SEO
 						p.recently-works__slider-description Need a SEO for our company who will let our company to a higher level
 						.recently-works__slider-prices
-							p.recently-works__slider-prices-info Highest bid $500
-							a.recently-works__slider-prices-link(href="#") Apply now
-				.recently-works__navigation
-					button.recently-works__button-next
-						//- svg(class="icon") use(xlink:href="images/sprites/svg/arrow.svg#arrow")
-					button.recently-works__button-prev
+							p.recently-works__slider-prices-info Highest bid $300
+							a.recently-works__slider-prices-link(href="#!") Apply now
+
 
 
